@@ -13,8 +13,11 @@ public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private String nome;
+
     private String descricao;
+
     @OneToMany(mappedBy = "categoria")
     private Set<Atividade> atividades = new HashSet<>();
 
